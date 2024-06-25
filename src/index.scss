@@ -1,0 +1,29 @@
+@import "@/styles/vars";
+@import "@/styles/fonts";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+html {
+  font-family: Inter, sans-serif;
+  font-weight: 300;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  max-width: #{$max-container-width + 2 * $container-padding};
+  margin: 0 auto;
+  padding-left: $container-padding;
+  padding-right: $container-padding;
+}

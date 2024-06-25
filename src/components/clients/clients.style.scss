@@ -1,0 +1,58 @@
+.clients-section {
+  background-color: black;
+  height: 100dvh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 165px;
+  color: white;
+  h2 {
+    font-size: 230px;
+    font-family: mango;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  .marquees {
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+    width: 100%;
+    padding: 0 40px;
+    width: 100%;
+  }
+  .clients-swiper {
+    width: 100%;
+  }
+
+  .clients-swiper,
+  .swiper-wrapper,
+  .swiper-slide {
+    color: white;
+    height: 100px;
+    font-size: 30px;
+  }
+  .swiper-slide {
+    flex-shrink: 0;
+  }
+
+  .swiper-wrapper {
+    transition-timing-function: linear !important;
+  }
+  .client-img {
+    object-fit: contain;
+    // height: 100%;
+    max-width: 220px;
+    max-height: 100px;
+  }
+}
+
+.cstm-img {
+  width: 150px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  overflow: hidden;
+}

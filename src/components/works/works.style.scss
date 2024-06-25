@@ -1,0 +1,106 @@
+@import "@/styles/vars";
+
+.works-section {
+  padding: 100px 0;
+  height: 100dvh;
+  background-color: $red;
+  position: relative;
+  overflow: hidden;
+}
+.pag-nav-box {
+  position: absolute;
+  top: #{100px + 40px};
+  left: #{40px + 40px};
+  width: calc(100% - 160px);
+  display: flex;
+  flex-direction: column;
+  .bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .swiper-line-pagination {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .swiper-page-number {
+    color: black;
+  }
+  .swiper-line-pagination,
+  .swiper-page-number,
+  .swiper-nav-btns {
+    position: static;
+  }
+
+  .swiper-nav {
+    background-color: black;
+    color: white;
+    .disabled {
+      background-color: white;
+      color: black;
+    }
+  }
+}
+
+.work-slide {
+  padding: 0 40px;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  overflow: hidden;
+  display: flex;
+  align-items: stretch;
+  &-content {
+    flex: 1;
+    position: relative;
+    padding: 40px;
+    display: flex;
+    align-items: flex-end;
+    color: white;
+    font-weight: 300;
+    font-size: 26px;
+    line-height: 31.2px;
+    .description {
+      width: 45%;
+    }
+  }
+  .image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      background: linear-gradient(
+        to top,
+        black 0%,
+        rgba(0, 0, 0, 0.5) 57%,
+        rgba(0, 0, 0, 0) 100%
+      );
+      z-index: 1;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 490px;
+    }
+  }
+}
+.works-swiper,
+.swiper-container,
+.swiper-wrapper,
+.swiper-slide,
+.work-slide {
+  height: 100%;
+}

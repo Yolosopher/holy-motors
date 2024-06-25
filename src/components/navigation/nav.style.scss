@@ -1,0 +1,24 @@
+@import "@/styles/vars";
+
+nav {
+  background-color: $gray;
+  height: 100dvh;
+  ul {
+    padding: 70px 40px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-transform: uppercase;
+  }
+}
+
+.nav-li {
+  color: $red;
+  font-family: mango;
+  font-size: calc((100dvh - 270px) / 4);
+  cursor: pointer;
+  .our {
+    color: black;
+  }
+}
