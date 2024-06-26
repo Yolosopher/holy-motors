@@ -1,4 +1,5 @@
 @import "@/styles/vars";
+@import "@/styles/mixins";
 @import "@/styles/fonts";
 
 * {
@@ -26,4 +27,38 @@ li {
   margin: 0 auto;
   padding-left: $container-padding;
   padding-right: $container-padding;
+}
+
+.less-than-1650 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100dvh;
+  overflow: hidden;
+  text-align: center;
+  padding: 0 2rem;
+  background-color: black;
+  font-family: mango;
+  @media (min-width: 1650px) {
+    display: none;
+  }
+  h1 {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: $gray;
+    max-width: 700px;
+    span {
+      color: $red;
+    }
+    @include sm {
+      font-size: 2.5rem;
+    }
+  }
+}
+.website {
+  display: none;
+  @media (min-width: 1650px) {
+    display: block;
+  }
 }
