@@ -1,7 +1,7 @@
 on:
   push:
     branches:
-      - "master" # change to the branch you wish to deploy from
+      - "main" # change to the branch you wish to deploy from
 
 permissions:
   contents: read
@@ -10,6 +10,9 @@ permissions:
 
 jobs:
   deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.build-publish.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
     - id: build-publish
@@ -17,4 +20,3 @@ jobs:
       with:
         path: dist # change to your build folder
         install_command: npm i
-        build_command: npm run build
